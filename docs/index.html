@@ -10,7 +10,7 @@ body {
 	font-size: 17px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 980px;
+	width: 1920px; /* 原来 980px，翻倍 */
 }
 h1 {
 	font-weight:300;
@@ -100,7 +100,6 @@ p {
 }
 .caption_justify {
 	font-size: 16px;
-	/*font-style: italic;*/
 	color: #666;
 	text-align: justify;
 	margin-top: 0px;
@@ -108,7 +107,6 @@ p {
 }
 .caption {
 	font-size: 16px;
-	/*font-style: italic;*/
 	color: #666;
 	text-align: center;
 	margin-top: 8px;
@@ -116,7 +114,6 @@ p {
 }
 .caption_inline {
 	font-size: 16px;
-	/*font-style: italic;*/
 	color: #666;
 	text-align: center;
 	margin-top: 8px;
@@ -124,7 +121,6 @@ p {
 }
 .caption_bold {
 	font-size: 16px;
-	/*font-style: italic;*/
 	color: #666;
 	text-align: center;
 	margin-top: 0px;
@@ -134,12 +130,6 @@ p {
 video {
 	display: block;
 	margin: auto;
-}
-figure {
-	display: block;
-	margin: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
 }
 figure {
 	display: block;
@@ -200,9 +190,24 @@ figure {
 	margin-right: auto;
 	padding-left: 16px;
 	padding-right: 16px;
+	width: 1960px; /* container 翻倍 */
 }
 .venue {
 	color: #1367a7;
+}
+
+/* 视频网格布局 */
+#video-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 两列 */
+  gap: 20px; /* 间距 */
+  justify-items: center;
+}
+#video-grid video {
+  width: 100%;
+  max-width: 900px; /* 控制每个视频最大宽度 */
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 </style>
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
@@ -216,8 +221,6 @@ figure {
 	<meta name="twitter:title" content="Real-time Collision-free Teleoperation">
 	<meta name="twitter:description" content="Real-time Collision-free Teleoperation">
 	<meta name="twitter:image" content="https://nvlabs.github.io/instant-ngp/assets/twitter.jpg">
-	
-	
 </head>
 
 <body>
@@ -226,22 +229,15 @@ figure {
 		<h1>Real-time Collision-free Teleoperation</h1>
 	</div>
 	<script>
-
 		function mytime(){
-		
-		var a = new Date();
-		
-		var b = a.toLocaleTimeString();
-		
-		var c = a.toLocaleDateString();
-		
-		document.getElementById("time").innerHTML = c+" "+b;
-		
+			var a = new Date();
+			var b = a.toLocaleTimeString();
+			var c = a.toLocaleDateString();
+			document.getElementById("time").innerHTML = c+" "+b;
 		}
-		
 		setInterval(function() {mytime()},1000);
-		
 	</script>
+
 	<div id="authors">
 		<div class="author-row">
 			<div class="col-1 text-center"><a href="https://Spphire.github.io">Apricity</a></div>
